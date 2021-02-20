@@ -1,0 +1,16 @@
+* {
+    text-align: center;
+}
+
+body{
+    width: 90%;
+}
+div {
+    margin-left: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgStream{
+    display: block;
+}

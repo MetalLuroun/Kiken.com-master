@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./src/upload.css" />
 </head>
 <body>
+    <div>
+        <h1>Management_Page</h1>
+    </div>
     <div id  = "uploadbox">
         <form id="upload-form"  method="post"  >
         　　　<input type="file" id="upload" name="upload"  /> <br />
         　　　<button type="submit"  onclick="uploadImg()" >upload</button>
         </form>
     </div>
+
+    <div id = 'list'>
+        <div id = "workimglist" class = "imgStream">
+            <h2>
+                工作图片
+            </h2>
+            <div>
+
+                <img>
+                <input type="checkbox">
+            </div>
+        </div>
+        <div id = "pgimglist" class = "imgStream">
+            <h2>
+                娱乐图片
+            </h2>
+            <div>
+
+                <img>
+                <input type="checkbox">
+            </div>
+        </div>
+    </div>
+
 </body>
 <script src="./src/getImg.js"></script>
 </html>
