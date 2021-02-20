@@ -23,7 +23,7 @@ async function getPGImg(){
         redirect: 'follow',
     };
     let section = document.getElementById('mainSection')
-    await fetch("http://146.56.199.136:8080/api/picture?page=0&page_size=100", requestOptions)
+    await fetch("http://146.56.199.136:8080/api/picture?page=0&page_size=100tag=playground", requestOptions)
         .then(response => response.json())
         .then(result => {
             for (let i of result["images"]){
