@@ -65,7 +65,7 @@
   width: 0;
   height: 0;
   border: 10px solid transparent;
-  border-top: 10px solid white;
+  border-top: 10px solid #ffffff;
   display: block;
   margin-left: 40px;
 }

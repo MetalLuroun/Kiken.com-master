@@ -8,9 +8,11 @@ async function getWorkImg(){
     .then(response => response.json())
     .then(result => {
         for (let i of result["images"]){
+            let div = document.createElement(`div`)
             let img = document.createElement("img")
             img.src = "http://" + i['Url']
-            section.appendChild(img)
+            div.appendChild(img);
+            section.appendChild(div);
         }
     })
     .catch(error => console.log('error', error));
@@ -26,9 +28,11 @@ async function getPGImg(){
         .then(response => response.json())
         .then(result => {
             for (let i of result["images"]){
+                let div = document.createElement(`div`)
                 let img = document.createElement("img")
                 img.src = "http://" + i['Url']
-                section.appendChild(img)
+                div.appendChild(img);
+                section.appendChild(div);
             }
         })
         .catch(error => console.log('error', error));
