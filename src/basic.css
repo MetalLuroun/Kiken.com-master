@@ -52,7 +52,4 @@ ul {
   font-family: "Minument Extened-Regular";
   src: url("../font/MonumentExtended-Regular.otf");
 }
-@font-face{
-  font-family: "Gilroy-Medium";
-  src: url('../fonts/Gilroy-Medium.ttf');
-}
+

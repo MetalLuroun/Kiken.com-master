@@ -1,16 +1,90 @@
+@font-face {
+    font-family: "Gotham Medium";
+    src: url("../font/GOTHAM-MEDIUM.TTF");
+}
 * {
+    margin: 0;
+    padding: 0;
     text-align: center;
+    font-family: Gotham Medium;
 }
-
+a {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+}
+img {
+    display: block;
+}
 body{
-    width: 90%;
+    background-color: #5A5AFF;
 }
-div {
-    margin-left: 3vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.title{
+    margin: 20px;
+}
+.file {
+    position: relative;
+    display: inline-block;
+    background: #5A5AFF;
+    height: 30px;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 0 20px;
+    overflow: hidden;
+    color: black;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.file input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+#list{
+    width: 90vw;
+    margin: 20px auto;
+    min-height: 60vh;
 }
 .imgStream{
+    width: 45vw;
+    float: left;
+}
+.imgStream > input[type="button"]{
     display: block;
+    margin: 10px auto;
+    height: 30px;
+    padding: 0 20px;
+    font-weight: bold;
+    line-height: 30px;
+    background: #5A5AFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.imglist{
+    width: 40vw;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.imglist>.item{
+    margin: 20px;
+    height: 100px;
+}
+.imglist>.item>img{
+    height: 100px;
+    float: left;
+}
+.imglist>.item>input[type="checkbox"]{
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-top: 40px;
+    color: #5a5aff;
 }

@@ -3,41 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kiken.com</title>
     <link rel="stylesheet" href="./src/upload.css" />
 </head>
-<body>
-    <div>
-        <h1>Management_Page</h1>
+<body onload="getImgs()">
+    <div class="title">
+        <h1>Image-Management</h1>
     </div>
-    <div id  = "uploadbox">
-        <input type="file" id="files" onchange="upload(event)"/>
-     
-    </div>
-
-    <div id = 'list'>
-        <div id = "workimglist" class = "imgStream" onload = getWorkImgOnload()>
-            <h2>
-                工作图片
-            </h2>
-            <div>
-
-                <img>
-                <input type="checkbox">
-            </div>
+    <a href="" class="file">
+        上传工作图片
+        <input type="file"  onchange="uploadWork(event)" accept="image/jpg, image/png, image/jpeg, image/gif">
+    </a>
+    <a href="" class="file">
+        上传娱乐图片
+        <input type="file" onchange="uploadPg(event)" accept="image/jpg, image/png, image/jpeg, image/gif">
+    </a>
+    <div id = 'list' >
+        <div  class = "imgStream" onload = "getWorkImgOnload()">
+            <h2>工作图片</h2>
+            <input type="button" onclick="deleteImgs('workimgcheck')" value="删除图片">
+            <form name="workimgForm" class = "imglist" id="workimglist">
+<!--                <div class="item">-->
+<!--                    <img src="" alt="" class="img">-->
+<!--                    <input type="checkbox" name="workimgcheck">-->
+<!--                </div>-->
+            </form>
         </div>
-        <div id = "pgimglist" class = "imgStream" onload = getPGImgOnload()>
-            <h2>
-                娱乐图片
-            </h2>
-            <div>
-
-                <img>
-                <input type="checkbox">
-            </div>
+        <div class = "imgStream" onload = "getPGImgOnload()">
+            <h2>娱乐图片</h2>
+            <input type="button" onclick="deleteImgs('pgimgcheck')" value="删除图片">
+            <form name="pgimgForm" class = "imglist" id="pgimglist">
+            </form>
         </div>
     </div>
 
 </body>
-<script src="./src/getImg.js"></script>
+<script src="./src/imgManage.js"></script>
 </html>
